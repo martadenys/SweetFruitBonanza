@@ -10,7 +10,7 @@ workflows:
         - DEFAULT
 
       vars:
-        XCODE_PROJECT: "Sweet&Fruit Bonanza"
+        XCODE_PROJECT: "Sweet&Fruit Bonanza.xcodeproj"
         XCODE_SCHEME: "Sweet&Fruit Bonanza"
         CERTIFICATE_PRIVATE_KEY: |
             -----BEGIN RSA PRIVATE KEY-----
@@ -50,7 +50,7 @@ workflows:
         
       - name: Fetch signing files for main target
         script: |
-          app-store-connect fetch-signing-files "$(xcode-project detect-bundle-id)" \
+          app-store-connect fetch-signing-files "sweetfruits.Sweet-Fruit-Bonanza" \
             --type IOS_APP_STORE \
             --create
             
