@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "AJBoukha_Create_a_169_realistic_wallpaper_of_a_vibrant_candy_pl_44e31437-601b-4556-b0c5-933bd79c430c.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

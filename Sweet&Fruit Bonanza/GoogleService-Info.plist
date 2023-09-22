@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyBcRnrizWKNlcoSqicfg9FHGMFsmkysoCU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>826489799994</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>sweetfruits.Sweet-Fruit-Bonanza</string>
+	<key>PROJECT_ID</key>
+	<string>sweetfruitbonzana</string>
+	<key>STORAGE_BUCKET</key>
+	<string>sweetfruitbonzana.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:826489799994:ios:4cb83bc2e3720332ed3c03</string>
+</dict>
+</plist>

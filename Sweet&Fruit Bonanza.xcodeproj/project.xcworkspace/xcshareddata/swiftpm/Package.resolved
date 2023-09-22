@@ -1,0 +1,50 @@
+{
+  "pins" : [
+    {
+      "identity" : "appsflyerframework",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AppsFlyerSDK/AppsFlyerFramework.git",
+      "state" : {
+        "revision" : "0d8359239a349db4ac2aba8efe2ad8835fc799b5",
+        "version" : "6.12.2"
+      }
+    },
+    {
+      "identity" : "bak",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/lizarge/BAK",
+      "state" : {
+        "branch" : "main",
+        "revision" : "d5c2122cbc69bca8a7496b18b6be9fa21c26dcc9"
+      }
+    },
+    {
+      "identity" : "exytemediapicker",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/exyte/ExyteMediaPicker.git",
+      "state" : {
+        "revision" : "e5cae02a7a16d5544acd6f7dc78995672fc83ed1",
+        "version" : "1.3.0"
+      }
+    },
+    {
+      "identity" : "facebook-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/facebook/facebook-ios-sdk.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "0f418b344e4b3f602fe79a04c71b02363e232c32"
+      }
+    },
+    {
+      "identity" : "tiktokopensdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/qasim/TikTokOpenSDK.git",
+      "state" : {
+        "revision" : "e00bcb5bc8496d0cb32eddc4980f0f462d7d1874",
+        "version" : "5.0.14"
+      }
+    }
+  ],
+  "version" : 2
+}

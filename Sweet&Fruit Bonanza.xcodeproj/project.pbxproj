@@ -7,18 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B78B8CE2ABB350E006E37EF /* Sweet_Fruit_BonanzaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B78B8CD2ABB350E006E37EF /* Sweet_Fruit_BonanzaApp.swift */; };
+		6B0964FD2ABCC21B003F090B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B0964FC2ABCC21B003F090B /* GoogleService-Info.plist */; };
+		6B0964FF2ABCC24C003F090B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0964FE2ABCC24C003F090B /* AppDelegate.swift */; };
 		6B78B8D02ABB350E006E37EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B78B8CF2ABB350E006E37EF /* ContentView.swift */; };
 		6B78B8D22ABB350F006E37EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B78B8D12ABB350F006E37EF /* Assets.xcassets */; };
 		6B78B8D52ABB350F006E37EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B78B8D42ABB350F006E37EF /* Preview Assets.xcassets */; };
+		6B78B8DD2ABB39DE006E37EF /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B78B8DC2ABB39DE006E37EF /* BackgroundView.swift */; };
+		6B78B8E92ABB4D95006E37EF /* WheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B78B8E82ABB4D95006E37EF /* WheelView.swift */; };
+		6B78B8EB2ABB6F5F006E37EF /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B78B8EA2ABB6F5F006E37EF /* ImageDetailView.swift */; };
+		6B78B8EE2ABB6F80006E37EF /* WheelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B78B8ED2ABB6F80006E37EF /* WheelViewModel.swift */; };
+		6BE2CA0F2ABC6D9C00D739F8 /* SavedImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE2CA0E2ABC6D9C00D739F8 /* SavedImagesView.swift */; };
+		D94FD56F2ABD85F5002F0807 /* BAK in Frameworks */ = {isa = PBXBuildFile; productRef = D94FD56E2ABD85F5002F0807 /* BAK */; };
+		D94FD5752ABD9920002F0807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94FD5742ABD9920002F0807 /* LaunchScreen.storyboard */; };
+		D9BAAF062ABDFCF500BDD2F7 /* codemagic.yaml in Resources */ = {isa = PBXBuildFile; fileRef = D9BAAF052ABDFCF500BDD2F7 /* codemagic.yaml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B0964F42ABCBF6E003F090B /* Sweet-Fruit-Bonanza-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Sweet-Fruit-Bonanza-Info.plist"; sourceTree = SOURCE_ROOT; };
+		6B0964F52ABCC057003F090B /* Sweet&Fruit Bonanza.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Sweet&Fruit Bonanza.entitlements"; sourceTree = "<group>"; };
+		6B0964FC2ABCC21B003F090B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6B0964FE2ABCC24C003F090B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B78B8CA2ABB350E006E37EF /* Sweet&Fruit Bonanza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sweet&Fruit Bonanza.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B78B8CD2ABB350E006E37EF /* Sweet_Fruit_BonanzaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sweet_Fruit_BonanzaApp.swift; sourceTree = "<group>"; };
 		6B78B8CF2ABB350E006E37EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6B78B8D12ABB350F006E37EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B78B8D42ABB350F006E37EF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6B78B8DC2ABB39DE006E37EF /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		6B78B8E82ABB4D95006E37EF /* WheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelView.swift; sourceTree = "<group>"; };
+		6B78B8EA2ABB6F5F006E37EF /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
+		6B78B8ED2ABB6F80006E37EF /* WheelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelViewModel.swift; sourceTree = "<group>"; };
+		6BE2CA0E2ABC6D9C00D739F8 /* SavedImagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedImagesView.swift; sourceTree = "<group>"; };
+		D94FD5742ABD9920002F0807 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D9BAAF052ABDFCF500BDD2F7 /* codemagic.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = codemagic.yaml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D94FD56F2ABD85F5002F0807 /* BAK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,6 +55,8 @@
 		6B78B8C12ABB350E006E37EF = {
 			isa = PBXGroup;
 			children = (
+				D9BAAF052ABDFCF500BDD2F7 /* codemagic.yaml */,
+				D94FD5742ABD9920002F0807 /* LaunchScreen.storyboard */,
 				6B78B8CC2ABB350E006E37EF /* Sweet&Fruit Bonanza */,
 				6B78B8CB2ABB350E006E37EF /* Products */,
 			);
@@ -51,8 +73,12 @@
 		6B78B8CC2ABB350E006E37EF /* Sweet&Fruit Bonanza */ = {
 			isa = PBXGroup;
 			children = (
-				6B78B8CD2ABB350E006E37EF /* Sweet_Fruit_BonanzaApp.swift */,
-				6B78B8CF2ABB350E006E37EF /* ContentView.swift */,
+				6B0964F52ABCC057003F090B /* Sweet&Fruit Bonanza.entitlements */,
+				6B0964F42ABCBF6E003F090B /* Sweet-Fruit-Bonanza-Info.plist */,
+				6B0964FC2ABCC21B003F090B /* GoogleService-Info.plist */,
+				6B0964FE2ABCC24C003F090B /* AppDelegate.swift */,
+				6B78B8DB2ABB39CC006E37EF /* Views */,
+				6B78B8EC2ABB6F6F006E37EF /* ViewModel */,
 				6B78B8D12ABB350F006E37EF /* Assets.xcassets */,
 				6B78B8D32ABB350F006E37EF /* Preview Content */,
 			);
@@ -65,6 +91,26 @@
 				6B78B8D42ABB350F006E37EF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6B78B8DB2ABB39CC006E37EF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6B78B8CF2ABB350E006E37EF /* ContentView.swift */,
+				6B78B8DC2ABB39DE006E37EF /* BackgroundView.swift */,
+				6B78B8EA2ABB6F5F006E37EF /* ImageDetailView.swift */,
+				6BE2CA0E2ABC6D9C00D739F8 /* SavedImagesView.swift */,
+				6B78B8E82ABB4D95006E37EF /* WheelView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6B78B8EC2ABB6F6F006E37EF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6B78B8ED2ABB6F80006E37EF /* WheelViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +129,9 @@
 			dependencies = (
 			);
 			name = "Sweet&Fruit Bonanza";
+			packageProductDependencies = (
+				D94FD56E2ABD85F5002F0807 /* BAK */,
+			);
 			productName = "Sweet&Fruit Bonanza";
 			productReference = 6B78B8CA2ABB350E006E37EF /* Sweet&Fruit Bonanza.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +160,9 @@
 				Base,
 			);
 			mainGroup = 6B78B8C12ABB350E006E37EF;
+			packageReferences = (
+				D94FD56D2ABD85F5002F0807 /* XCRemoteSwiftPackageReference "BAK" */,
+			);
 			productRefGroup = 6B78B8CB2ABB350E006E37EF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +177,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9BAAF062ABDFCF500BDD2F7 /* codemagic.yaml in Resources */,
+				D94FD5752ABD9920002F0807 /* LaunchScreen.storyboard in Resources */,
+				6B0964FD2ABCC21B003F090B /* GoogleService-Info.plist in Resources */,
 				6B78B8D52ABB350F006E37EF /* Preview Assets.xcassets in Resources */,
 				6B78B8D22ABB350F006E37EF /* Assets.xcassets in Resources */,
 			);
@@ -137,8 +192,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B0964FF2ABCC24C003F090B /* AppDelegate.swift in Sources */,
+				6B78B8DD2ABB39DE006E37EF /* BackgroundView.swift in Sources */,
 				6B78B8D02ABB350E006E37EF /* ContentView.swift in Sources */,
-				6B78B8CE2ABB350E006E37EF /* Sweet_Fruit_BonanzaApp.swift in Sources */,
+				6B78B8EE2ABB6F80006E37EF /* WheelViewModel.swift in Sources */,
+				6B78B8E92ABB4D95006E37EF /* WheelView.swift in Sources */,
+				6BE2CA0F2ABC6D9C00D739F8 /* SavedImagesView.swift in Sources */,
+				6B78B8EB2ABB6F5F006E37EF /* ImageDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,16 +329,25 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Sweet&Fruit Bonanza/Sweet&Fruit Bonanza.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Sweet&Fruit Bonanza/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Sweet-Fruit-Bonanza-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Sweet&Fruit Bonanza";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.kids-games";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Select \"Allow\" for better experience. The app сan use images to setup user profile and problem solving, we do not store your personal photos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "The app сan use images to setup user profile and problem solving, we do not store your personal photos.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Select \"Allow\" for better experience. This identifier will be used to collect Crash Data and in-app activity in order to improve functionalities and user engagement.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -286,6 +355,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "sweetfruits.Sweet-Fruit-Bonanza";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -297,16 +369,25 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Sweet&Fruit Bonanza/Sweet&Fruit Bonanza.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Sweet&Fruit Bonanza/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Sweet-Fruit-Bonanza-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Sweet&Fruit Bonanza";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.kids-games";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Select \"Allow\" for better experience. The app сan use images to setup user profile and problem solving, we do not store your personal photos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "The app сan use images to setup user profile and problem solving, we do not store your personal photos.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Select \"Allow\" for better experience. This identifier will be used to collect Crash Data and in-app activity in order to improve functionalities and user engagement.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,6 +395,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "sweetfruits.Sweet-Fruit-Bonanza";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -342,6 +426,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D94FD56D2ABD85F5002F0807 /* XCRemoteSwiftPackageReference "BAK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lizarge/BAK";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D94FD56E2ABD85F5002F0807 /* BAK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D94FD56D2ABD85F5002F0807 /* XCRemoteSwiftPackageReference "BAK" */;
+			productName = BAK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6B78B8C22ABB350E006E37EF /* Project object */;
 }

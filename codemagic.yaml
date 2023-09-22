@@ -1,0 +1,83 @@
+workflows:
+  unity-ios-workflow:
+    name: iOS Workflow
+    max_build_duration: 120
+    integrations:
+      app_store_connect: "Physic 12"
+    environment:
+      xcode: 14.2
+      groups:
+        - DEFAULT
+
+      vars:
+        XCODE_PROJECT: "Sweet&Fruit Bonanza"
+        XCODE_SCHEME: "Sweet&Fruit Bonanza"
+        CERTIFICATE_PRIVATE_KEY: |
+            -----BEGIN RSA PRIVATE KEY-----
+            MIIEpQIBAAKCAQEA0CKmCGl8Yu4u7UW/mT9tOHzL7RF4GQzRL4KGhJV2pkLAeNNc
+            yKe87IkoiJCOHhbYSPD0vOZ01qyQgcFDmM6rl2S3apdjat5mh/eODhZ17HQVXjZo
+            J9lvxGHjb6dc4uzACOFOIv1+489MrTTVW/Loq9D1nzoa3T/DMiV0pSXAJIFtoLX3
+            bEBUkiUFQMif4ktkd3KsM8KzNqc/As+5e1P8EeZZ5iYGh9qpzjH5nSPvewPvcUcT
+            VnBaXbvuW15XfeFVvdB12fP5ybn2D2R2mazF42FbeikkCuiWXuOXNDXLbR5Ze/SU
+            mG84zFjwSjsGqUbCpVUaTMiGwu+Jv5i4ReXzNwIDAQABAoIBAQCPgpSA0FsXy6tH
+            pwQJIpaokEP73kO04gWKgLFH0dbRpM0ZgoNDR4UYgyoTn7iePpo7EQlvBmghbTLm
+            hN+bCUV/Sc6+DExcb6S6s5KbXBlLRG9HWrROZbqO6f/sCLYfMabneJJrxeYsJc90
+            zi0fDUoozhfOBj5nt4NbnD/lbzYg9G7GoUu1y51NbwTWmUigrlKj/uC9CWqgfLJF
+            Y7M0aIo6K//VE+eSEsmEKSP83dlUIxSZwaGFlumAMElgsFH3U/2hmX2Ps2OEOfdc
+            i8RSx03AcOnG/qnPS5FYBTr3+eBGXc2IDPVZEHS0f9YBhvruycC7SnPJkN2FHyvp
+            1lPI8aABAoGBAOsXLXUCMyyiWv4zN52wyVaHN3Ei6N0c2UnaS7kRPjnQKVJokVUe
+            8Ciu+wM9zTuaoceL978x8Qmdsp1VOAvTvV8haUs+PZzwCZ4PzzDK4A6v39kCYaIn
+            Lg8C9ZCt+NrcE7b6LktmKSy34Yry3SRzH9TzMfSaw13gixNDczqLurwBAoGBAOKl
+            uRTDbgODw06bXcEIP53YM8VpN1ZIWpNRxRpcSTTtm8wLgedJRKEIz4mLIbtSF+oj
+            3SrQQ61Y/LsYFl9hrruvAzbLBdyL7lLXEgQTqw+rtO/xcW/RV8Tc8j8C2G/xKEDO
+            LEZOlunyfqIWXqbI4J1P0PvuaF/NlfiTSw29w483AoGBANBz0cPBupymLWbfBT6W
+            5kAKT5fK6448KVN589DawEFFGY7P16YRc8OvPDWolBV4zGCC9J+c6eyr3xfw22xp
+            SK5Ukue7/aftk6mKvR23liqPuj3TBb1hXk7DQfkSueleYUDK30fOA056kcvCA2Jx
+            jlUlezM4E2lnVAo1sbPE+EQBAoGBAII5A/GJJDHCyDnnDOQ3MA4qRfy8Kn5Zzijt
+            B5nQwoM1rpl7VyUjtNntrQjzNuthDLqL5qyNwwTbp0J8YYZmIrZVpTwbRH/mqoVQ
+            a1qKTnQPjUN771h26L4E0O8hXGhdIGqzyz6OMymyGc5ZmgKsUlownPvTjIbXIb8U
+            KkB38t/bAoGASOEyfl7S+GN1Iz6NTWLbKNh8ZN8KIBn7NGg6TgGSTNQJV2PwrUBI
+            gaikUbhHI3nojVdjJnk3F5atmul6Y2gOXZwUaHzBtj2j6JNARG8w3+307sQZFzdm
+            xYSFboNLfMx9iYlCLB+8lKkutKguTQJM6TClJ06e25KeBCl5nmGxnyw=
+            -----END RSA PRIVATE KEY-----
+        
+    scripts:
+      - name: Delete derived data
+        script: rm -rf ~/Library/Developer/Xcode/DerivedData
+        
+      - name: Set up keychain to be used for code signing using Codemagic CLI 'keychain' command
+        script: keychain initialize
+        
+      - name: Fetch signing files for main target
+        script: |
+          app-store-connect fetch-signing-files "$(xcode-project detect-bundle-id)" \
+            --type IOS_APP_STORE \
+            --create
+            
+      - name: Set up signing certificate
+        script: keychain add-certificates
+        
+      - name: Set up code signing settings on Xcode project
+        script: xcode-project use-profiles
+        
+      #- name: Increment build number
+      #  script: |
+      #   echo "$(app-store-connect get-latest-testflight-build-number)"
+      #   agvtool new-version -all "$(app-store-connect get-latest-testflight-build-number)"
+        
+      - name: Build ipa for distribution
+        script: |
+          xcode-project build-ipa \
+            --project "$XCODE_PROJECT" \
+            --scheme "$XCODE_SCHEME" \
+            --archive-xcargs "CODE_SIGN_STYLE=Auto"
+            
+      - name: Build ipa for distribution
+        script: |
+          app-store-connect publish --path "/Users/builder/clone/build/ios/ipa/Sweet&Fruit Bonanza.ipa"
+    
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+
+
