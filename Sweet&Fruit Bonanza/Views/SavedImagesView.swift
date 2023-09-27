@@ -21,49 +21,61 @@ struct SavedImagesView: View {
                         vm.makeClick()
                     }
                 }, label: {
-                    Image(systemName: "xmark")
+                    if #available(iOS 15.0, *) {
+                        Image(systemName: "xmark")
+                            .padding()
+                            .foregroundColor(Color.yellow)
+                            .font(.system(size: 25).weight(.bold))
+                            .background(
+                                Circle()
+                                    .foregroundColor(Color.white)
+                                    .overlay {
+                                        Circle()
+                                            .stroke(Color.yellow,lineWidth: 5)
+                                    }
+                            )
+                    } else {
+                        // Fallback on earlier versions
+                    }
+                }).padding()
+                if #available(iOS 15.0, *) {
+                    Text("My pictures")
                         .padding()
-                        .foregroundStyle(Color.yellow)
-                        .font(.system(size: 25).weight(.bold))
+                        .font(.system(size: 20, weight: .semibold))
+                        .foregroundColor(.yellow)
                         .background(
-                            Circle()
-                                .foregroundStyle(Color.white)
+                            RoundedRectangle(cornerRadius: 20)
+                                .foregroundColor(Color.white)
                                 .overlay {
-                                    Circle()
+                                    RoundedRectangle(cornerRadius: 20)
                                         .stroke(Color.yellow,lineWidth: 5)
                                 }
                         )
-                }).padding()
-                Text("My pictures")
-                    .padding()
-                    .font(.system(size: 20, weight: .semibold))
-                    .foregroundStyle(.yellow)
-                    .background(
-                        RoundedRectangle(cornerRadius: 20)
-                            .foregroundStyle(Color.white)
-                            .overlay {
-                                RoundedRectangle(cornerRadius: 20)
-                                    .stroke(Color.yellow,lineWidth: 5)
-                            }
-                    )
+                } else {
+                    // Fallback on earlier versions
+                }
                 Button(action: {
                     UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
                     if vm.soundEffect {
                         vm.makeClick()
                     }
                 }, label: {
-                    Image(systemName: "trash")
-                        .padding()
-                        .foregroundStyle(Color.yellow)
-                        .font(.system(size: 25).weight(.bold))
-                        .background(
-                            Circle()
-                                .foregroundStyle(Color.white)
-                                .overlay {
-                                    Circle()
-                                        .stroke(Color.yellow,lineWidth: 5)
-                                }
-                        )
+                    if #available(iOS 15.0, *) {
+                        Image(systemName: "trash")
+                            .padding()
+                            .foregroundStyle(Color.yellow)
+                            .font(.system(size: 25).weight(.bold))
+                            .background(
+                                Circle()
+                                    .foregroundStyle(Color.white)
+                                    .overlay {
+                                        Circle()
+                                            .stroke(Color.yellow,lineWidth: 5)
+                                    }
+                            )
+                    } else {
+                        // Fallback on earlier versions
+                    }
                 }).padding()
             }
             ScrollView {

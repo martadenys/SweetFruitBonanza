@@ -16,29 +16,33 @@ struct WheelView: View {
                 .rotationEffect(.radians(rotation))
                 .animation(.easeInOut(duration: 1.5), value: rotation)
             
-            Button(action: {
-                let randomAmount = Double(Int.random(in: 7..<15))
-                rotation += CGFloat(randomAmount)
-                if vm.soundEffect {
-                    vm.makeClick()
-                }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
-                    withAnimation(Animation.spring()) {
-                        stoped = true
+            if #available(iOS 15.0, *) {
+                Button(action: {
+                    let randomAmount = Double(Int.random(in: 7..<15))
+                    rotation += CGFloat(randomAmount)
+                    if vm.soundEffect {
+                        vm.makeClick()
                     }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+                        withAnimation(Animation.spring()) {
+                            stoped = true
+                        }
+                    }
+                }, label: {
+                    Text("START")
+                        .padding()
+                        .foregroundColor(.white)
+                        .font(.system(size: 30))
+                        .background(Color.orange)
+                        .cornerRadius(20)
+                }).overlay {
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(Color.purple, lineWidth: 7)
                 }
-            }, label: {
-                Text("START")
-                    .padding()
-                    .foregroundColor(.white)
-                    .font(.system(size: 30))
-                    .background(Color.orange)
-                    .cornerRadius(20)
-            }).overlay {
-                RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color.purple, lineWidth: 7)
+                .offset(y: 45)
+            } else {
+                // Fallback on earlier versions
             }
-            .offset(y: 45)
         }.padding()
     }
 }
@@ -121,7 +125,7 @@ struct Triangle: Shape {
 
 extension Color {
     static var all: [Color] {
-        [Color.yellow, .green, .pink, .cyan, .mint, .orange, .teal, .indigo]
+        [Color.yellow, .green, .pink, .red, .gray, .orange, .yellow, .purple]
     }
 }
 

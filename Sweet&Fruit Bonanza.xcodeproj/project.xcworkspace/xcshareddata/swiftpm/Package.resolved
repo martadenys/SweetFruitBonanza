@@ -15,16 +15,7 @@
       "location" : "https://github.com/lizarge/BAK",
       "state" : {
         "branch" : "main",
-        "revision" : "d5c2122cbc69bca8a7496b18b6be9fa21c26dcc9"
-      }
-    },
-    {
-      "identity" : "exytemediapicker",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/exyte/ExyteMediaPicker.git",
-      "state" : {
-        "revision" : "e5cae02a7a16d5544acd6f7dc78995672fc83ed1",
-        "version" : "1.3.0"
+        "revision" : "4f28920c82891745642614ed42c644876736db94"
       }
     },
     {
@@ -34,6 +25,24 @@
       "state" : {
         "branch" : "main",
         "revision" : "0f418b344e4b3f602fe79a04c71b02363e232c32"
+      }
+    },
+    {
+      "identity" : "sbpasyncimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/yutailang0119/SBPAsyncImage",
+      "state" : {
+        "revision" : "b1fd0fa16eaa58ae29f728160020ef1b78de740d",
+        "version" : "0.2.0"
+      }
+    },
+    {
+      "identity" : "swiftui-mediapicker",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/UWAppDev/SwiftUI-MediaPicker",
+      "state" : {
+        "revision" : "96f18b1350873dec0a76355c7060cd0a06100901",
+        "version" : "0.2.0"
       }
     },
     {

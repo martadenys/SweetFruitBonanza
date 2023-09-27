@@ -17,9 +17,9 @@
 		6B78B8EB2ABB6F5F006E37EF /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B78B8EA2ABB6F5F006E37EF /* ImageDetailView.swift */; };
 		6B78B8EE2ABB6F80006E37EF /* WheelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B78B8ED2ABB6F80006E37EF /* WheelViewModel.swift */; };
 		6BE2CA0F2ABC6D9C00D739F8 /* SavedImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE2CA0E2ABC6D9C00D739F8 /* SavedImagesView.swift */; };
-		D94FD56F2ABD85F5002F0807 /* BAK in Frameworks */ = {isa = PBXBuildFile; productRef = D94FD56E2ABD85F5002F0807 /* BAK */; };
 		D94FD5752ABD9920002F0807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94FD5742ABD9920002F0807 /* LaunchScreen.storyboard */; };
 		D9BAAF062ABDFCF500BDD2F7 /* codemagic.yaml in Resources */ = {isa = PBXBuildFile; fileRef = D9BAAF052ABDFCF500BDD2F7 /* codemagic.yaml */; };
+		D9CB7C9D2AC4726D00001A32 /* BAK in Frameworks */ = {isa = PBXBuildFile; productRef = D9CB7C9C2AC4726D00001A32 /* BAK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D94FD56F2ABD85F5002F0807 /* BAK in Frameworks */,
+				D9CB7C9D2AC4726D00001A32 /* BAK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +59,7 @@
 				D94FD5742ABD9920002F0807 /* LaunchScreen.storyboard */,
 				6B78B8CC2ABB350E006E37EF /* Sweet&Fruit Bonanza */,
 				6B78B8CB2ABB350E006E37EF /* Products */,
+				D9CB7C9B2AC4726D00001A32 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +114,13 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		D9CB7C9B2AC4726D00001A32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,7 +138,7 @@
 			);
 			name = "Sweet&Fruit Bonanza";
 			packageProductDependencies = (
-				D94FD56E2ABD85F5002F0807 /* BAK */,
+				D9CB7C9C2AC4726D00001A32 /* BAK */,
 			);
 			productName = "Sweet&Fruit Bonanza";
 			productReference = 6B78B8CA2ABB350E006E37EF /* Sweet&Fruit Bonanza.app */;
@@ -331,7 +339,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Sweet&Fruit Bonanza/Sweet&Fruit Bonanza.entitlements";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"Sweet&Fruit Bonanza/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
@@ -347,7 +355,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -372,7 +380,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Sweet&Fruit Bonanza/Sweet&Fruit Bonanza.entitlements";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"Sweet&Fruit Bonanza/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
@@ -388,7 +396,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -441,7 +449,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D94FD56E2ABD85F5002F0807 /* BAK */ = {
+		D9CB7C9C2AC4726D00001A32 /* BAK */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D94FD56D2ABD85F5002F0807 /* XCRemoteSwiftPackageReference "BAK" */;
 			productName = BAK;

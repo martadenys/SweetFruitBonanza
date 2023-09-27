@@ -31,18 +31,22 @@ struct ContentView: View {
                                 }
                             }
                         }, label: {
-                            Image(systemName: "bookmark")
-                                .padding()
-                                .foregroundStyle(Color.yellow)
-                                .font(.system(size: 25).weight(.bold))
-                                .background(
-                                Circle()
-                                    .foregroundStyle(Color.white)
-                                    .overlay {
+                            if #available(iOS 15.0, *) {
+                                Image(systemName: "bookmark")
+                                    .padding()
+                                    .foregroundColor(Color.yellow)
+                                    .font(.system(size: 25).weight(.bold))
+                                    .background(
                                         Circle()
-                                            .stroke(Color.yellow,lineWidth: 5)
-                                    }
-                                )
+                                            .foregroundColor(Color.white)
+                                            .overlay {
+                                                Circle()
+                                                    .stroke(Color.yellow,lineWidth: 5)
+                                            }
+                                    )
+                            } else {
+                                // Fallback on earlier versions
+                            }
                         })
                         
                         Spacer()
@@ -53,18 +57,22 @@ struct ContentView: View {
                                 vm.makeClick()
                             }
                         }, label: {
-                            Image(systemName:vm.soundEffect ? "speaker.wave.2.fill" : "speaker.slash.fill")
-                                .padding()
-                                .foregroundStyle(Color.yellow)
-                                .font(.system(size: 25).weight(.bold))
-                                .background(
-                                Circle()
-                                    .foregroundStyle(Color.white)
-                                    .overlay {
+                            if #available(iOS 15.0, *) {
+                                Image(systemName:vm.soundEffect ? "speaker.wave.2.fill" : "speaker.slash.fill")
+                                    .padding()
+                                    .foregroundColor(Color.yellow)
+                                    .font(.system(size: 25).weight(.bold))
+                                    .background(
                                         Circle()
-                                            .stroke(Color.yellow,lineWidth: 5)
-                                    }
-                                )
+                                            .foregroundColor(Color.white)
+                                            .overlay {
+                                                Circle()
+                                                    .stroke(Color.yellow,lineWidth: 5)
+                                            }
+                                    )
+                            } else {
+                                // Fallback on earlier versions
+                            }
                         })
                     }.padding()
                     .offset(y: geo.size.height * -0.40)
