@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
           
           BAKService.shared.setupUIAnalytics(showLeaderBoard: false, launchOptions: launchOptions, window: &window) {
-              return ContentView()
+              return MainView()
           }
       
           return true

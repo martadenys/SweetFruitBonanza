@@ -11,12 +11,11 @@ struct ImageDetailView: View {
     
     @State private var saturation: Double = 0
     @State private var finishGame: Bool = false
-    @State private var showInfo: Bool = false
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @Environment(\.verticalSizeClass) var verticalSizeClass
     @Environment(\.presentationMode) var presentation
     @Binding var image: String
-    @ObservedObject var vm: WheelViewModel = WheelViewModel()
+    @ObservedObject var vm: WheelViewModel
     
     var body: some View {
         GeometryReader { geo in
@@ -46,37 +45,15 @@ struct ImageDetailView: View {
                         }
                     })
                     Spacer()
-                    Button(action: {
-                        withAnimation(Animation.spring()) {
-                            self.showInfo.toggle()
-                            if vm.soundEffect {
-                                vm.makeClick()
-                            }
-                        }
-                    }, label: {
-                        if #available(iOS 15.0, *) {
-                            Image(systemName: showInfo ? "xmark" : "info.circle")
-                                .padding()
-                                .foregroundStyle(Color.yellow)
-                                .font(.system(size: 25).weight(.bold))
-                                .background(
-                                    Circle()
-                                        .foregroundColor(Color.white)
-                                        .overlay {
-                                            Circle()
-                                                .stroke(Color.yellow,lineWidth: 5)
-                                        }
-                                )
-                        } else {
-                            // Fallback on earlier versions
-                        }
-                    })
+                
                 }.padding()
                 .offset(y: geo.size.height * -0.40)
                 if verticalSizeClass == .regular {
                    RegularImageView(geo: geo, image: $image, saturation: $saturation, finishGame: $finishGame, vm: vm)
+                        .blur(radius: finishGame ? 5.0 : 0.0)
                 } else if verticalSizeClass == .compact {
                    CompactImageView(geo: geo, image: $image, saturation: $saturation, finishGame: $finishGame, vm: vm)
+                        .blur(radius: finishGame ? 5.0 : 0.0)
                 }
                 if finishGame {
                     Image("win")
@@ -87,8 +64,6 @@ struct ImageDetailView: View {
                                 vm.winSound()
                             }
                         }
-                } else if showInfo {
-                    InfoView()
                 }
             }.frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(BackgroundView())
@@ -102,33 +77,6 @@ struct ImageDetailView: View {
     ImageDetailView(image: .constant("1"))
 }
 */
-
-struct InfoView: View {
-    var body: some View {
-        if #available(iOS 15.0, *) {
-            VStack {
-                Text("Rules:")
-                    .padding()
-                Text("Rub the image until it becomes colored, after which it will be saved to your album")
-                
-            }
-            .frame(width: 350, height: 350)
-            .padding()
-            .font(.system(size: 30, weight: .semibold))
-            .foregroundStyle(.yellow)
-            .background(
-                RoundedRectangle(cornerRadius: 20)
-                    .foregroundColor(Color.white)
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 20)
-                            .stroke(Color.yellow,lineWidth: 5)
-                    }
-            )
-        } else {
-            // Fallback on earlier versions
-        }
-    }
-}
 
 
 struct RegularImageView: View {

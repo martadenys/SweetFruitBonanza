@@ -26,6 +26,8 @@ struct WheelView: View {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
                         withAnimation(Animation.spring()) {
                             stoped = true
+                            vm.addToSlotsArray(for: currentSegment)
+                            vm.checkSlotsCapacity()
                         }
                     }
                 }, label: {
@@ -64,7 +66,7 @@ struct Wheel: View {
                             .stroke(Color.all[index], style: StrokeStyle(lineWidth: proxy.size.width / 2))
                             .rotationEffect(.radians(.pi * segmentSize))
                             .opacity(0.8)
-                        label(text: vm.images[index], index: CGFloat(index), offset: proxy.size.width / 2.6)
+                        label(text: vm.images[index].name, index: CGFloat(index), offset: proxy.size.width / 2.6)
                     }
                 }
             }.overlay(
@@ -107,7 +109,7 @@ struct Pointer: View {
                 rotation = angle
             })
             .onChange(of: rotation) { _ in
-                currentSegment = vm.calculateSegment(at: rotation, images: vm.images)
+                currentSegment = vm.calculateSegment(at: rotation, images: vm.images).name
             }
     }
 }

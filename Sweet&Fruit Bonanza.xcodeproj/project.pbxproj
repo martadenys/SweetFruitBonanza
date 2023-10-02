@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		6B0964FD2ABCC21B003F090B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B0964FC2ABCC21B003F090B /* GoogleService-Info.plist */; };
 		6B0964FF2ABCC24C003F090B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0964FE2ABCC24C003F090B /* AppDelegate.swift */; };
+		6B5339322AC7376D00B4603D /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5339312AC7376D00B4603D /* ImageModel.swift */; };
+		6B5339342AC7492E00B4603D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5339332AC7492E00B4603D /* MainView.swift */; };
+		6B5339362AC74C3C00B4603D /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5339352AC74C3C00B4603D /* CustomTabBarView.swift */; };
+		6B5339382AC750AC00B4603D /* ProgresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5339372AC750AC00B4603D /* ProgresView.swift */; };
+		6B53393B2AC85FB300B4603D /* ImageContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6B5339392AC85FB300B4603D /* ImageContainer.xcdatamodeld */; };
+		6B53393D2AC8602600B4603D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B53393C2AC8602600B4603D /* CoreDataManager.swift */; };
+		6B5339402AC881FD00B4603D /* SlotsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B53393F2AC881FD00B4603D /* SlotsGrid.swift */; };
+		6B5339442AC8823400B4603D /* BonusBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5339432AC8823400B4603D /* BonusBannerView.swift */; };
+		6B5339462AC8826000B4603D /* LockedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5339452AC8826000B4603D /* LockedImageView.swift */; };
+		6B5339482AC8829C00B4603D /* InfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5339472AC8829C00B4603D /* InfoCardView.swift */; };
 		6B78B8D02ABB350E006E37EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B78B8CF2ABB350E006E37EF /* ContentView.swift */; };
 		6B78B8D22ABB350F006E37EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B78B8D12ABB350F006E37EF /* Assets.xcassets */; };
 		6B78B8D52ABB350F006E37EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B78B8D42ABB350F006E37EF /* Preview Assets.xcassets */; };
@@ -18,7 +28,6 @@
 		6B78B8EE2ABB6F80006E37EF /* WheelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B78B8ED2ABB6F80006E37EF /* WheelViewModel.swift */; };
 		6BE2CA0F2ABC6D9C00D739F8 /* SavedImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE2CA0E2ABC6D9C00D739F8 /* SavedImagesView.swift */; };
 		D94FD5752ABD9920002F0807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94FD5742ABD9920002F0807 /* LaunchScreen.storyboard */; };
-		D9BAAF062ABDFCF500BDD2F7 /* codemagic.yaml in Resources */ = {isa = PBXBuildFile; fileRef = D9BAAF052ABDFCF500BDD2F7 /* codemagic.yaml */; };
 		D9CB7C9D2AC4726D00001A32 /* BAK in Frameworks */ = {isa = PBXBuildFile; productRef = D9CB7C9C2AC4726D00001A32 /* BAK */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +36,16 @@
 		6B0964F52ABCC057003F090B /* Sweet&Fruit Bonanza.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Sweet&Fruit Bonanza.entitlements"; sourceTree = "<group>"; };
 		6B0964FC2ABCC21B003F090B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6B0964FE2ABCC24C003F090B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6B5339312AC7376D00B4603D /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		6B5339332AC7492E00B4603D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		6B5339352AC74C3C00B4603D /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		6B5339372AC750AC00B4603D /* ProgresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgresView.swift; sourceTree = "<group>"; };
+		6B53393A2AC85FB300B4603D /* ImageContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ImageContainer.xcdatamodel; sourceTree = "<group>"; };
+		6B53393C2AC8602600B4603D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		6B53393F2AC881FD00B4603D /* SlotsGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotsGrid.swift; sourceTree = "<group>"; };
+		6B5339432AC8823400B4603D /* BonusBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusBannerView.swift; sourceTree = "<group>"; };
+		6B5339452AC8826000B4603D /* LockedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockedImageView.swift; sourceTree = "<group>"; };
+		6B5339472AC8829C00B4603D /* InfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCardView.swift; sourceTree = "<group>"; };
 		6B78B8CA2ABB350E006E37EF /* Sweet&Fruit Bonanza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sweet&Fruit Bonanza.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B78B8CF2ABB350E006E37EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6B78B8D12ABB350F006E37EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -37,7 +56,6 @@
 		6B78B8ED2ABB6F80006E37EF /* WheelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelViewModel.swift; sourceTree = "<group>"; };
 		6BE2CA0E2ABC6D9C00D739F8 /* SavedImagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedImagesView.swift; sourceTree = "<group>"; };
 		D94FD5742ABD9920002F0807 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D9BAAF052ABDFCF500BDD2F7 /* codemagic.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = codemagic.yaml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,10 +70,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B5339302AC7374F00B4603D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6B5339312AC7376D00B4603D /* ImageModel.swift */,
+				6B5339392AC85FB300B4603D /* ImageContainer.xcdatamodeld */,
+				6B53393C2AC8602600B4603D /* CoreDataManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6B53393E2AC881CE00B4603D /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				6B78B8DC2ABB39DE006E37EF /* BackgroundView.swift */,
+				6B5339472AC8829C00B4603D /* InfoCardView.swift */,
+				6B53393F2AC881FD00B4603D /* SlotsGrid.swift */,
+				6B5339432AC8823400B4603D /* BonusBannerView.swift */,
+				6B5339452AC8826000B4603D /* LockedImageView.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
 		6B78B8C12ABB350E006E37EF = {
 			isa = PBXGroup;
 			children = (
-				D9BAAF052ABDFCF500BDD2F7 /* codemagic.yaml */,
 				D94FD5742ABD9920002F0807 /* LaunchScreen.storyboard */,
 				6B78B8CC2ABB350E006E37EF /* Sweet&Fruit Bonanza */,
 				6B78B8CB2ABB350E006E37EF /* Products */,
@@ -80,6 +119,7 @@
 				6B0964FE2ABCC24C003F090B /* AppDelegate.swift */,
 				6B78B8DB2ABB39CC006E37EF /* Views */,
 				6B78B8EC2ABB6F6F006E37EF /* ViewModel */,
+				6B5339302AC7374F00B4603D /* Model */,
 				6B78B8D12ABB350F006E37EF /* Assets.xcassets */,
 				6B78B8D32ABB350F006E37EF /* Preview Content */,
 			);
@@ -97,8 +137,11 @@
 		6B78B8DB2ABB39CC006E37EF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6B53393E2AC881CE00B4603D /* SubViews */,
 				6B78B8CF2ABB350E006E37EF /* ContentView.swift */,
-				6B78B8DC2ABB39DE006E37EF /* BackgroundView.swift */,
+				6B5339332AC7492E00B4603D /* MainView.swift */,
+				6B5339372AC750AC00B4603D /* ProgresView.swift */,
+				6B5339352AC74C3C00B4603D /* CustomTabBarView.swift */,
 				6B78B8EA2ABB6F5F006E37EF /* ImageDetailView.swift */,
 				6BE2CA0E2ABC6D9C00D739F8 /* SavedImagesView.swift */,
 				6B78B8E82ABB4D95006E37EF /* WheelView.swift */,
@@ -185,7 +228,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9BAAF062ABDFCF500BDD2F7 /* codemagic.yaml in Resources */,
 				D94FD5752ABD9920002F0807 /* LaunchScreen.storyboard in Resources */,
 				6B0964FD2ABCC21B003F090B /* GoogleService-Info.plist in Resources */,
 				6B78B8D52ABB350F006E37EF /* Preview Assets.xcassets in Resources */,
@@ -200,13 +242,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B5339462AC8826000B4603D /* LockedImageView.swift in Sources */,
+				6B5339482AC8829C00B4603D /* InfoCardView.swift in Sources */,
+				6B5339382AC750AC00B4603D /* ProgresView.swift in Sources */,
 				6B0964FF2ABCC24C003F090B /* AppDelegate.swift in Sources */,
+				6B5339442AC8823400B4603D /* BonusBannerView.swift in Sources */,
+				6B5339362AC74C3C00B4603D /* CustomTabBarView.swift in Sources */,
+				6B5339342AC7492E00B4603D /* MainView.swift in Sources */,
 				6B78B8DD2ABB39DE006E37EF /* BackgroundView.swift in Sources */,
+				6B53393B2AC85FB300B4603D /* ImageContainer.xcdatamodeld in Sources */,
 				6B78B8D02ABB350E006E37EF /* ContentView.swift in Sources */,
+				6B53393D2AC8602600B4603D /* CoreDataManager.swift in Sources */,
 				6B78B8EE2ABB6F80006E37EF /* WheelViewModel.swift in Sources */,
+				6B5339402AC881FD00B4603D /* SlotsGrid.swift in Sources */,
 				6B78B8E92ABB4D95006E37EF /* WheelView.swift in Sources */,
 				6BE2CA0F2ABC6D9C00D739F8 /* SavedImagesView.swift in Sources */,
 				6B78B8EB2ABB6F5F006E37EF /* ImageDetailView.swift in Sources */,
+				6B5339322AC7376D00B4603D /* ImageModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +507,19 @@
 			productName = BAK;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		6B5339392AC85FB300B4603D /* ImageContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6B53393A2AC85FB300B4603D /* ImageContainer.xcdatamodel */,
+			);
+			currentVersion = 6B53393A2AC85FB300B4603D /* ImageContainer.xcdatamodel */;
+			path = ImageContainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6B78B8C22ABB350E006E37EF /* Project object */;
 }
