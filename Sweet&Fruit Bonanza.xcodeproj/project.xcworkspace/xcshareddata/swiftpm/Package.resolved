@@ -12,10 +12,10 @@
     {
       "identity" : "bak_optimized",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/balabantim/BAK_OPTIMIZED.git",
+      "location" : "https://github.com/balabantim/BAK_OPTIMIZED",
       "state" : {
         "branch" : "main",
-        "revision" : "d426eb06a15e07c51ff122059834ad14e7109d43"
+        "revision" : "e93e0085ec58fbd5f4da3bd17536405b461d42e1"
       }
     },
     {

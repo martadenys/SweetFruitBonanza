@@ -30,8 +30,8 @@
 		6BFF121B2ADB1FE1001BAC3A /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFF121A2ADB1FE1001BAC3A /* SoundManager.swift */; };
 		6BFF121D2ADB267C001BAC3A /* writing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6BFF121C2ADB267C001BAC3A /* writing.mp3 */; };
 		D94FD5752ABD9920002F0807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94FD5742ABD9920002F0807 /* LaunchScreen.storyboard */; };
-		D97917C72ADD4062003CA433 /* BAK in Frameworks */ = {isa = PBXBuildFile; productRef = D97917C62ADD4062003CA433 /* BAK */; };
 		D97917C92ADD51C2003CA433 /* codemagic.yaml in Resources */ = {isa = PBXBuildFile; fileRef = D97917C82ADD51C2003CA433 /* codemagic.yaml */; };
+		D97917CD2ADD871E003CA433 /* BAK in Frameworks */ = {isa = PBXBuildFile; productRef = D97917CC2ADD871E003CA433 /* BAK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D97917C72ADD4062003CA433 /* BAK in Frameworks */,
+				D97917CD2ADD871E003CA433 /* BAK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +206,7 @@
 			);
 			name = "Sweet&Fruit Bonanza";
 			packageProductDependencies = (
-				D97917C62ADD4062003CA433 /* BAK */,
+				D97917CC2ADD871E003CA433 /* BAK */,
 			);
 			productName = "Sweet&Fruit Bonanza";
 			productReference = 6B78B8CA2ABB350E006E37EF /* Sweet&Fruit Bonanza.app */;
@@ -237,7 +237,7 @@
 			);
 			mainGroup = 6B78B8C12ABB350E006E37EF;
 			packageReferences = (
-				D97917C52ADD4062003CA433 /* XCRemoteSwiftPackageReference "BAK_OPTIMIZED" */,
+				D97917CB2ADD871E003CA433 /* XCRemoteSwiftPackageReference "BAK_OPTIMIZED" */,
 			);
 			productRefGroup = 6B78B8CB2ABB350E006E37EF /* Products */;
 			projectDirPath = "";
@@ -419,7 +419,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Sweet&Fruit Bonanza/Sweet&Fruit Bonanza.entitlements";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_ASSET_PATHS = "\"Sweet&Fruit Bonanza/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
@@ -460,7 +460,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Sweet&Fruit Bonanza/Sweet&Fruit Bonanza.entitlements";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_ASSET_PATHS = "\"Sweet&Fruit Bonanza/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
@@ -518,9 +518,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D97917C52ADD4062003CA433 /* XCRemoteSwiftPackageReference "BAK_OPTIMIZED" */ = {
+		D97917CB2ADD871E003CA433 /* XCRemoteSwiftPackageReference "BAK_OPTIMIZED" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/balabantim/BAK_OPTIMIZED.git";
+			repositoryURL = "https://github.com/balabantim/BAK_OPTIMIZED";
 			requirement = {
 				branch = main;
 				kind = branch;
@@ -529,9 +529,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D97917C62ADD4062003CA433 /* BAK */ = {
+		D97917CC2ADD871E003CA433 /* BAK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D97917C52ADD4062003CA433 /* XCRemoteSwiftPackageReference "BAK_OPTIMIZED" */;
+			package = D97917CB2ADD871E003CA433 /* XCRemoteSwiftPackageReference "BAK_OPTIMIZED" */;
 			productName = BAK;
 		};
 /* End XCSwiftPackageProductDependency section */
