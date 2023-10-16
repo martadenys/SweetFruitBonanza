@@ -91,12 +91,14 @@ struct ContentView: View {
                     }.padding()
                     .offset(y: geo.size.height * -0.42)
                     .blur(radius: vm.isBonus || showInfo || !userOnboarded ? 10 : 0)
+                    
                     Text("Total scores: \(vm.returnTotalScores())")
                         .padding()
                         .font(.custom("ChalkboardSE-Regular", size: 25))
                         .foregroundColor(Color.white)
                         .background(Color.yellow.opacity(0.5).blur(radius: 5))
-                        .cornerRadius(15)
+                        .cornerRadius(15).offset(CGSize(width: 0, height: -220))
+                    
                     if verticalSizeClass == .compact {
                         Group {
                             WheelView(currentSegment: $currentSegment, vm: vm, stoped: $stoped)
