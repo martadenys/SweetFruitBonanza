@@ -9,43 +9,43 @@ struct WheelView: View {
     
     var body: some View {
         VStack {
-            Pointer(rotation: $rotation, currentSegment: $currentSegment, vm: vm)
-            
             Wheel(rotation: $rotation, vm: vm)
-                .frame(width: 350, height: 350)
+                .frame(width: 320, height: 320)
                 .rotationEffect(.radians(rotation))
-                .animation(.easeInOut(duration: 1.5), value: rotation)
-            
             if #available(iOS 15.0, *) {
                 Button(action: {
-                    let randomAmount = Double(Int.random(in: 7..<15))
-                    rotation += CGFloat(randomAmount)
                     if vm.soundEffect {
                         vm.makeClick()
                     }
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                         withAnimation(Animation.spring()) {
                             stoped = true
+                            currentSegment = vm.images.randomElement()?.name ?? "no name"
                             vm.addToSlotsArray(for: currentSegment)
                             vm.checkSlotsCapacity()
                         }
                     }
                 }, label: {
-                    Text("START")
+                    Text("TAKE")
                         .padding()
-                        .foregroundColor(.white)
-                        .font(.system(size: 30))
-                        .background(Color.orange)
+                        .font(.custom("ChalkboardSE-Regular", size: 30))
+                        .foregroundColor(.yellow)
+                        .background(Color.white.opacity(0.8))
                         .cornerRadius(20)
                 }).overlay {
                     RoundedRectangle(cornerRadius: 20)
-                        .stroke(Color.purple, lineWidth: 7)
+                        .stroke(Color.yellow, lineWidth: 3)
                 }
-                .offset(y: 45)
+                .offset(y: 35)
             } else {
                 // Fallback on earlier versions
             }
         }.padding()
+            .onAppear {
+                withAnimation(Animation.easeInOut(duration: 7).speed(0.1).repeatForever()) {
+                    rotation += CGFloat(360)
+                }
+            }
     }
 }
 
@@ -53,8 +53,7 @@ struct Wheel: View {
     
     @Binding var rotation: CGFloat
     @ObservedObject var vm: WheelViewModel
-    
-    
+
     var body: some View {
         GeometryReader { proxy in
             ZStack {
@@ -71,7 +70,7 @@ struct Wheel: View {
                 }
             }.overlay(
                 Circle()
-                    .stroke(Color.purple, lineWidth: 10)
+                    .stroke(Color.yellow, lineWidth: 3)
             )
         }
     }
@@ -90,38 +89,6 @@ struct Wheel: View {
             .frame(width: 70, height: 70 )
             .rotationEffect(.radians(rotation(index: CGFloat(index))))
             .offset(x: cos(rotation(index: index)) * offset, y: sin(rotation(index: index)) * offset)
-    }
-}
-
-struct Pointer: View {
-    
-    @Binding var rotation: CGFloat
-    @Binding var currentSegment: String
-    @ObservedObject var vm: WheelViewModel
-    
-    var body: some View {
-        Triangle()
-            .fill(Color.red)
-            .frame(width: 25, height: 40)
-            .rotationEffect(Angle(degrees: 180))
-            .gesture(DragGesture().onChanged { value in
-                let angle = atan2(value.location.y, value.location.x)
-                rotation = angle
-            })
-            .onChange(of: rotation) { _ in
-                currentSegment = vm.calculateSegment(at: rotation, images: vm.images).name
-            }
-    }
-}
-
-struct Triangle: Shape {
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        path.move(to: CGPoint(x: rect.midX, y: rect.minY))
-        path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
-        path.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
-        path.closeSubpath()
-        return path
     }
 }
 

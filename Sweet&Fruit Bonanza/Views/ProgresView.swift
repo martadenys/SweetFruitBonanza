@@ -13,16 +13,15 @@ struct ProgresView: View {
     var columns: [GridItem] = [GridItem(.flexible()),GridItem(.flexible()),]
     var body: some View {
         ZStack(alignment: .top) {
-            VStack {
-                HStack {
-                    Text("Total scores: \(vm.returnTotalScores())")
-                        .padding()
-                        .font(.system(size: 25, weight: .bold))
-                        .foregroundColor(Color.white)
-                        .background(Color.black.opacity(0.5).blur(radius: 5))
-                        .cornerRadius(15)
-                    Spacer()
-                }
+            ScrollView(showsIndicators: false) {
+                Text("Collect scores to unlock new images")
+                    .padding()
+                    .font(.custom("ChalkboardSE-Regular", size: 25))
+                    .foregroundColor(Color.white)
+                    .background(Color.black.opacity(0.5).blur(radius: 5))
+                    .multilineTextAlignment(.center)
+                    .cornerRadius(15)
+                
                 LazyVGrid(columns: columns) {
                     ForEach(vm.lockedImages) { image in
                         LockedImageView(vm: vm, image: image)
@@ -30,8 +29,16 @@ struct ProgresView: View {
                                 vm.trimCalculate(for: image, scores: vm.returnTotalScores())
                             }
                     }
-                }.background(Color.black.opacity(0.4).blur(radius: 5))
+                    
+                }.background(Color.black.opacity(0.5).blur(radius: 5))
                     .cornerRadius(20)
+                Text("Total scores: \(vm.returnTotalScores())")
+                    .padding()
+                    .font(.custom("ChalkboardSE-Regular", size: 25))
+                    .foregroundColor(Color.white)
+                    .background(Color.black.opacity(0.5).blur(radius: 5))
+                    .multilineTextAlignment(.center)
+                    .cornerRadius(15)
             }.onAppear {
                 vm.getScores()
             }
@@ -41,10 +48,6 @@ struct ProgresView: View {
     }
 }
 
-/*
-#Preview {
-    ProgresView(vm: WheelViewModel())
-}
-*/
+
 
 

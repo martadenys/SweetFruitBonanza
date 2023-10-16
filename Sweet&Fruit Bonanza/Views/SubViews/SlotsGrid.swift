@@ -27,7 +27,7 @@ struct SlotsGrid: View {
         .background(
             ZStack {
                 RoundedRectangle(cornerRadius: 15)
-                    .foregroundColor(Color.white)
+                    .foregroundColor(Color.white.opacity(0.5))
                 RoundedRectangle(cornerRadius: 15)
                     .stroke(Color.yellow,lineWidth: 5)
             }

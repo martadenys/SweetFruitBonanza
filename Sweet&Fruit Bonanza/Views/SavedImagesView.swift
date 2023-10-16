@@ -18,7 +18,7 @@ struct SavedImagesView: View {
                 if #available(iOS 15.0, *) {
                     Text("My pictures")
                         .padding()
-                        .font(.system(size: 20, weight: .semibold))
+                        .font(.custom("ChalkboardSE-Regular", size: 20))
                         .foregroundColor(.yellow)
                         .frame(maxWidth: .infinity)
                         .background(

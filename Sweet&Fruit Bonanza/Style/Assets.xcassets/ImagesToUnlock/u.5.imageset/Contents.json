@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "sstmidjourney_candies_icons_in_candy_crash_style_18fe97cd-0f68-415b-8767-82620703562b copy 3.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

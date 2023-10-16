@@ -11,6 +11,7 @@ struct ImageDetailView: View {
     
     @State private var saturation: Double = 0
     @State private var finishGame: Bool = false
+    @State private var playSoundEffect: Bool = false
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @Environment(\.verticalSizeClass) var verticalSizeClass
     @Environment(\.presentationMode) var presentation
@@ -31,7 +32,7 @@ struct ImageDetailView: View {
                             Image(systemName: "arrowshape.left")
                                 .padding()
                                 .foregroundColor(Color.yellow)
-                                .font(.system(size: 25).weight(.bold))
+                                .font(.system(size: 20) .weight(.bold))
                                 .background(
                                     Circle()
                                         .foregroundColor(Color.white)
@@ -49,10 +50,10 @@ struct ImageDetailView: View {
                 }.padding()
                 .offset(y: geo.size.height * -0.40)
                 if verticalSizeClass == .regular {
-                   RegularImageView(geo: geo, image: $image, saturation: $saturation, finishGame: $finishGame, vm: vm)
+                    RegularImageView(geo: geo, image: $image, saturation: $saturation, finishGame: $finishGame, vm: vm, playSoundEffect: $playSoundEffect)
                         .blur(radius: finishGame ? 5.0 : 0.0)
                 } else if verticalSizeClass == .compact {
-                   CompactImageView(geo: geo, image: $image, saturation: $saturation, finishGame: $finishGame, vm: vm)
+                    CompactImageView(geo: geo, image: $image, saturation: $saturation, finishGame: $finishGame, vm: vm, playSoundEffect: $playSoundEffect)
                         .blur(radius: finishGame ? 5.0 : 0.0)
                 }
                 if finishGame {
@@ -85,8 +86,9 @@ struct RegularImageView: View {
    @Binding var image: String
    @Binding var saturation: Double
    @Binding var finishGame: Bool
-    @ObservedObject var vm: WheelViewModel
-    @Environment(\.presentationMode) var presentation
+   @ObservedObject var vm: WheelViewModel
+   @Environment(\.presentationMode) var presentation
+    @Binding var playSoundEffect: Bool
     
     var body: some View {
         ZStack {
@@ -110,6 +112,7 @@ struct RegularImageView: View {
                 .saturation(saturation)
                 .gesture(DragGesture()
                     .onChanged({ _ in
+                        self.playSoundEffect = true
                         self.saturation += 0.008
                         if saturation >= 0.6 && !finishGame {
                             vm.saveColoredImage(for: image)
@@ -120,7 +123,17 @@ struct RegularImageView: View {
                             }
                         }
                     })
+                        .onEnded { _ in
+                            self.playSoundEffect = false
+                        }
                 )
+                .onChange(of: playSoundEffect, perform: { value in
+                    if value {
+                        SoundManager.instance.playEffect()
+                    } else {
+                        SoundManager.instance.stopSoundEffect()
+                    }
+                })
         }
     }
 }
@@ -131,8 +144,9 @@ struct CompactImageView: View {
     @Binding var image: String
     @Binding var saturation: Double
     @Binding var finishGame: Bool
-     @ObservedObject var vm: WheelViewModel
+    @ObservedObject var vm: WheelViewModel
     @Environment(\.presentationMode) var presentation
+    @Binding var playSoundEffect: Bool
     
     var body: some View {
         ZStack {
@@ -156,6 +170,7 @@ struct CompactImageView: View {
                 .saturation(saturation)
                 .gesture(DragGesture()
                     .onChanged({ _ in
+                        self.playSoundEffect = true
                         self.saturation += 0.008
                         if saturation >= 0.6 && !finishGame {
                             vm.saveColoredImage(for: image)
@@ -166,7 +181,17 @@ struct CompactImageView: View {
                             }
                         }
                     })
+                        .onEnded { _ in
+                            self.playSoundEffect = false
+                        }
                 )
+                .onChange(of: playSoundEffect, perform: { value in
+                    if value {
+                        SoundManager.instance.playEffect()
+                    } else {
+                        SoundManager.instance.stopSoundEffect()
+                    }
+                })
         }
     }
 }

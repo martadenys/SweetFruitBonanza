@@ -28,7 +28,6 @@ class WheelViewModel: ObservableObject {
     
     
     init() {
-       
         getScores()
         getLockedImages()
         getSavedImages()
@@ -49,7 +48,6 @@ class WheelViewModel: ObservableObject {
             ImageModel(name: "7", trim: 0, scoreToUnlock: 0),
             ImageModel(name: "8", trim: 0, scoreToUnlock: 0)
         ]
-        
         self.images = images
     }
     
@@ -62,7 +60,6 @@ class WheelViewModel: ObservableObject {
             ImageModel(name: "u.5", trim: 0, scoreToUnlock: 6500),
             ImageModel(name: "u.6", trim: 0, scoreToUnlock: 7500)
         ]
-        
         self.lockedImages = images
     }
     //Fetching saved images from core data

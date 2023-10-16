@@ -10,12 +10,12 @@
       }
     },
     {
-      "identity" : "bak",
+      "identity" : "bak_optimized",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/lizarge/BAK",
+      "location" : "https://github.com/balabantim/BAK_OPTIMIZED.git",
       "state" : {
         "branch" : "main",
-        "revision" : "c036e51e6976c2be283082049e784763b2306a01"
+        "revision" : "d426eb06a15e07c51ff122059834ad14e7109d43"
       }
     },
     {
@@ -24,7 +24,7 @@
       "location" : "https://github.com/facebook/facebook-ios-sdk.git",
       "state" : {
         "branch" : "main",
-        "revision" : "0f418b344e4b3f602fe79a04c71b02363e232c32"
+        "revision" : "ea35e1611f7a6cedd14b6acbd4ba333e90bb9140"
       }
     },
     {
@@ -37,21 +37,12 @@
       }
     },
     {
-      "identity" : "swiftui-mediapicker",
+      "identity" : "swiftui-tooltip",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/UWAppDev/SwiftUI-MediaPicker",
+      "location" : "https://github.com/quassum/SwiftUI-Tooltip",
       "state" : {
-        "revision" : "96f18b1350873dec0a76355c7060cd0a06100901",
-        "version" : "0.2.0"
-      }
-    },
-    {
-      "identity" : "tiktokopensdk",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/qasim/TikTokOpenSDK.git",
-      "state" : {
-        "revision" : "e00bcb5bc8496d0cb32eddc4980f0f462d7d1874",
-        "version" : "5.0.14"
+        "branch" : "main",
+        "revision" : "3bef9a21e2bcf1d0f078ddf6731c3c8996f32c3e"
       }
     }
   ],

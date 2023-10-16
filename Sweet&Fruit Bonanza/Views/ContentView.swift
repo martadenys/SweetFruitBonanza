@@ -17,7 +17,7 @@ struct ContentView: View {
     @ObservedObject var vm: WheelViewModel
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @Environment(\.verticalSizeClass) var verticalSizeClass
-   
+    @AppStorage("userOnboarded") var userOnboarded: Bool = false
     
     var body: some View {
         GeometryReader { geo in
@@ -49,7 +49,22 @@ struct ContentView: View {
                                 // Fallback on earlier versions
                             }
                         }).padding(5)
-                        SlotsGrid(proxy: geo, vm: vm)
+                        if vm.slotsArray.isEmpty {
+                            Text("Scores: \(vm.returnTotalScores())")
+                                .font(.custom("ChalkboardSE-Regular", size: 25))
+                                .foregroundColor(Color.yellow)
+                                .frame(width: geo.size.width / 2, height: geo.size.height / 11)
+                                .cornerRadius(15)
+                                .background(
+                                    ZStack {
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .foregroundColor(Color.white)
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.yellow,lineWidth: 5)
+                                    })
+                        } else {
+                            SlotsGrid(proxy: geo, vm: vm)
+                        }
                         Button(action: {
                             vm.soundEffect.toggle()
                             if vm.soundEffect {
@@ -74,8 +89,14 @@ struct ContentView: View {
                             }
                         }).frame(width: 70)
                     }.padding()
-                    .offset(y: geo.size.height * -0.40)
-                    .blur(radius: vm.isBonus || showInfo ? 10 : 0)
+                    .offset(y: geo.size.height * -0.42)
+                    .blur(radius: vm.isBonus || showInfo || !userOnboarded ? 10 : 0)
+                    Text("Total scores: \(vm.returnTotalScores())")
+                        .padding()
+                        .font(.custom("ChalkboardSE-Regular", size: 25))
+                        .foregroundColor(Color.white)
+                        .background(Color.yellow.opacity(0.5).blur(radius: 5))
+                        .cornerRadius(15)
                     if verticalSizeClass == .compact {
                         Group {
                             WheelView(currentSegment: $currentSegment, vm: vm, stoped: $stoped)
@@ -85,11 +106,14 @@ struct ContentView: View {
                                 .frame(width: geo.size.width / 15, height: geo.size.height / 11)
                         }.offset(y: geo.size.height / -5)
                     } else if verticalSizeClass == .regular {
-                        WheelView(currentSegment: $currentSegment, vm: vm, stoped: $stoped)
-                            .blur(radius: vm.isBonus || showInfo  ? 10 : 0)
-                        Image("2")
-                            .resizable()
-                            .frame(width: geo.size.width / 6, height: geo.size.height / 11)
+                        Group {
+                            WheelView(currentSegment: $currentSegment, vm: vm, stoped: $stoped)
+                                .blur(radius: vm.isBonus || showInfo || !userOnboarded ? 10 : 0)
+                            Image("2")
+                                .resizable()
+                                .frame(width: geo.size.width / 3, height: geo.size.height / 6)
+                                .offset(y: geo.size.height / -17)
+                        }.offset(y: geo.size.height / 20)
                     }
                   
                       if vm.isBonus {
@@ -100,6 +124,8 @@ struct ContentView: View {
                                 }
                         }
                       } else if showInfo {
+                          InfoCardView(showInfo: $showInfo, vm: vm)
+                      } else if !userOnboarded {
                           InfoCardView(showInfo: $showInfo, vm: vm)
                       }
                 }
@@ -112,9 +138,5 @@ struct ContentView: View {
     }
 }
 
-/*
-#Preview {
-    ContentView(vm: WheelViewModel())
-}
 
-*/
+

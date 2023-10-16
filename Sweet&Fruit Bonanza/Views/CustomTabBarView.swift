@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CustomTabBarView: View {
     
-   @Binding var tabs: Tabs
+    @Binding var tabs: Tabs
     
     var body: some View {
         GeometryReader{ proxy in
@@ -18,59 +18,72 @@ struct CustomTabBarView: View {
                 ZStack {
                     RoundedRectangle(cornerRadius: 25)
                         .padding()
-                        .foregroundColor(Color.purple.opacity(0.7))
-                        .blur(radius: 6)
-                        .frame(width: proxy.size.width / 1, height: proxy.size.height / 7.5)
-                    RoundedRectangle(cornerRadius: 25)
-                        .stroke(Color.purple,lineWidth: 5)
-                        .padding()
+                        .foregroundColor(Color.yellow.opacity(0.8))
                         .frame(width: proxy.size.width / 1, height: proxy.size.height / 7.5)
                     HStack(spacing: 70) {
                         VStack {
-                            Image(systemName: "dice.fill")
-                                .font(.title)
-                                .foregroundColor(tabs == .game ? Color.purple.opacity(0.5) : Color.white)
-                                .onTapGesture {
-                                    withAnimation(Animation.default) {
-                                        tabs = .game
-                                    }
-                                }
-                            Text("Game")
-                                .font(.caption2)
-                                .foregroundColor(tabs == .game ? Color.purple.opacity(0.5) : Color.white)
+                            if tabs == .game {
+                                Image(systemName: "dice.fill")
+                                    .font(.title)
+                                    .foregroundColor(tabs == .game ? Color.yellow.opacity(0.5) : Color.white)
+                                Text("Game")
+                                    .font(.custom("ChalkboardSE-Regular", size: 15))
+                                    .foregroundColor(tabs == .game ? Color.yellow.opacity(0.5) : Color.white)
+                            } else {
+                                Image(systemName: "dice.fill")
+                                    .font(.title)
+                                    .foregroundColor(tabs == .game ? Color.yellow.opacity(0.5) : Color.white)
+                            }
                         }.frame(width: proxy.size.width / 5.5, height: proxy.size.height / 12.5)
-                        .background(tabs == .game ? Color.white : Color.clear)
+                            .onTapGesture {
+                                withAnimation(Animation.spring()) {
+                                    tabs = .game
+                                }
+                            }
+                            .background(tabs == .game ? Color.white : Color.clear)
                             .cornerRadius(20)
                         VStack {
-                            Image(systemName: "bookmark.fill")
-                                .font(.title)
-                                .foregroundColor(tabs == .saved ? Color.purple.opacity(0.5) : Color.white)
-                                .onTapGesture {
-                                    withAnimation(Animation.default) {
-                                        tabs = .saved
-                                    }
-                                }
-                            Text("Saved")
-                                .font(.caption2)
-                                .foregroundColor(tabs == .saved ? Color.purple.opacity(0.5) : Color.white)
+                            if tabs == .saved {
+                                Image(systemName: "bookmark.fill")
+                                    .font(.title)
+                                    .foregroundColor(tabs == .saved ? Color.yellow.opacity(0.5) : Color.white)
+                                Text("Saved")
+                                    .font(.custom("ChalkboardSE-Regular", size: 15))
+                                    .foregroundColor(tabs == .saved ? Color.yellow.opacity(0.5) : Color.white)
+                            } else {
+                                Image(systemName: "bookmark.fill")
+                                    .font(.title)
+                                    .foregroundColor(tabs == .saved ? Color.yellow.opacity(0.5) : Color.white)
+                            }
                         }.frame(width: proxy.size.width / 6.0, height: proxy.size.height / 12.5)
-                            .background(tabs == .saved ? Color.white : Color.clear)
-                                .cornerRadius(20)
-                        VStack {
-                            Image(systemName: "mountain.2.fill")
-                                .font(.title)
-                                .foregroundColor(tabs == .progres ? Color.purple.opacity(0.5) : Color.white)
-                                .onTapGesture {
-                                    withAnimation(Animation.default) {
-                                        tabs = .progres
-                                    }
+                            .onTapGesture {
+                                withAnimation(Animation.spring()) {
+                                    tabs = .saved
                                 }
-                            Text("Discover")
-                                .font(.caption2)
-                                .foregroundColor(tabs == .progres ? Color.purple.opacity(0.5) : Color.white)
+                            }
+                            .background(tabs == .saved ? Color.white : Color.clear)
+                            .cornerRadius(20)
+                        VStack {
+                            if tabs == .progres {
+                                Image(systemName: "photo.on.rectangle.angled")
+                                    .font(.title)
+                                    .foregroundColor(tabs == .progres ? Color.yellow.opacity(0.5) : Color.white)
+                                Text("Images")
+                                    .font(.custom("ChalkboardSE-Regular", size: 15))
+                                    .foregroundColor(tabs == .progres ? Color.yellow.opacity(0.5) : Color.white)
+                            } else {
+                                Image(systemName: "photo.on.rectangle.angled")
+                                    .font(.title)
+                                    .foregroundColor(tabs == .progres ? Color.yellow.opacity(0.5) : Color.white)
+                            }
                         }.frame(width: proxy.size.width / 5.5, height: proxy.size.height / 12.5)
+                            .onTapGesture {
+                                withAnimation(Animation.default) {
+                                    tabs = .progres
+                                }
+                            }
                             .background(tabs == .progres ? Color.white : Color.clear)
-                                .cornerRadius(20)
+                            .cornerRadius(20)
                     }
                 }
             }

@@ -11,6 +11,7 @@ struct InfoCardView: View {
     
     @Binding var showInfo: Bool
     @ObservedObject var vm: WheelViewModel
+    @AppStorage("userOnboarded") var userOnboarded: Bool = false
     
     var body: some View {
         VStack {
@@ -21,13 +22,14 @@ struct InfoCardView: View {
                             vm.makeClick()
                         }
                         showInfo = false
+                        userOnboarded = true
                     }
                 }, label: {
                     if #available(iOS 15.0, *) {
                         Image(systemName: "xmark")
                             .padding()
                             .foregroundStyle(Color.yellow)
-                            .font(.system(size: 25).weight(.bold))
+                            .font(.custom("ChalkboardSE-Regular", size: 25))
                             .background(
                                 Circle()
                                     .foregroundColor(Color.white)
@@ -41,7 +43,7 @@ struct InfoCardView: View {
                     }
                 }).padding(5)
                 Text("Rules of the game:")
-                    .font(.system(size: 25, weight: .bold))
+                    .font(.custom("ChalkboardSE-Regular", size: 25))
                     .foregroundColor(Color.white)
             }.padding(10)
             .font(.system(size: 25,weight: .bold))
@@ -53,7 +55,7 @@ struct InfoCardView: View {
                 Text(" 3. In the achievements tab, there are additional scrolls that you can open by accumulating points. Each image has a progress ring, once the ring is filled the image will unlock and replace a random image on the wheel. This way you can open new images for the game and your collection of saved images.We wish you a pleasant and exciting game!").padding(.vertical,5)
             }.padding()
             .foregroundColor(Color.white)
-                .font(.system(size: 25,weight: .bold))
+            .font(.custom("ChalkboardSE-Regular", size: 25))
                 .background(Color.black.opacity(0.7))
                 .cornerRadius(15)
           
